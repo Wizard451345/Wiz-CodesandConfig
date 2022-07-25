@@ -127,7 +127,7 @@ source ~/.cache/wal/colors-tty.sh
 eval "$(thefuck --alias)"
 
 #Vim
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
 
 #Color Names!
 txtblk='\[\e[0;30m\]' # Black - Regular
@@ -175,9 +175,26 @@ normalC="${txtwht}"
 
 alias ls='lsd'
 
-#Red name for root
+#Red name for root must copy to /root!!
 if [ "${UID}" -eq "0" ]; then
   nameC="${txtred}"
 fi
 
 export PATH=$PATH:/home/pi
+
+alias ranger='. ranger'
+
+#!/bin/bash
+
+if [[ -d "$HOME/.local/bin" ]]
+then
+    export PATH=$PATH:$HOME/.local/bin
+fi
+
+alias src='source ~/.bashrc'
+alias :q='exit'
+alias pacsys="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+alias pacpkgs="pacman -Slq | fzf --preview 'pacman -Si {}' --layout=reverse"
+alias vim='nvim'
+alias grep='grep --color=auto'
+
