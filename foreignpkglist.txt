@@ -1,0 +1,15 @@
+ani-cli
+awesome-git
+hollywood
+microsoft-edge-stable-bin
+moc-pulse
+mopidy-mpd
+mopidy-spotify
+mpdris2
+nerd-fonts-source-code-pro
+picom-git
+python39
+spotify-tui
+ttf-adobe-source-code-pro-fonts
+visual-studio-code-bin
+yay
